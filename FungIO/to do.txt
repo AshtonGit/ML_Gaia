@@ -1,0 +1,42 @@
+Done but not tested
+---------------------
+
+To do======
+
+
+push to git, current version with video of best performing right now. 
+Then add a doc explaining changes you intend to make and why.
+(DONE)it seems that sight range can always create a 2d array with a true center (only small testing) 
+need to change size of input layer to match size of sight range. 
+
+Food does'nt spawn in a "straight line" to the snake, so snakes will allways have to turn to reach food
+Increase vision to 7*7 instead of 5*5
+Edges have an input value (out ofn bounds == -1)
+Snakes may need to play 2 rounds to mitigate flukes
+Snakes have a "direction of movement" node
+
+Issue is also there are so many inputs as position of food is a single input node out of the whole input layer.
+ So what if networks start as fully connected to begin with? That way all position inputs are taken into account from the beginning.
+Expecting snake to evolve those connectionos would happen but would take forever
+
+How can we make the simulation modularisable / customisable?
+- API to add sprites, blocks, change networks, set "rules of the world"
+- UI tapping into the API
+
+- IsGameRunning is clumsy, easy top create bugs
+- IsAlive for snake is also clumsy and easy to create bugs. 
+- Snake setup taking a genomekey is also messy
+-reproduce pop freezes as it doesn't set state of snaake to alive. (reset snake should make it alive???)
+
+When gameobject.find runs, (GameHandler) does it actually find the object?
+
+hava a "ucrrent generation" counter
+
+ALSO-  are genomeinfo wrappers necessary or can we have 
+body and behavior genomes both represented by the same set of code / genome? That way calculating species and reproduction is way easier. 
+
+add autosaving
+
+make the neat code run on graphics card
+
+genome visualiser, can inspect an organism and see its genome
